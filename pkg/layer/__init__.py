@@ -1,1 +1,1 @@
-from .emd_loss_layer import EMDLoss
+from .emd_loss_layer import EMDLoss, debug_matching
