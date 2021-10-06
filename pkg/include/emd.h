@@ -6,6 +6,10 @@
 
 #include "cuda_helper.h"
 
+#ifndef AT_CHECK
+#define AT_CHECK TORCH_CHECK 
+#endif
+
 
 std::vector<at::Tensor> emd_forward_cuda(
 	at::Tensor xyz1,

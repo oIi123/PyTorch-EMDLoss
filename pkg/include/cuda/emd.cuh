@@ -5,6 +5,10 @@
 
 #define BLOCK_SIZE 512
 
+#ifndef AT_CHECK
+#define AT_CHECK TORCH_CHECK 
+#endif
+
 template <typename T>
 __global__ void approx_match_kernel(
 	const int64_t b, const int64_t n, const int64_t m, const int64_t d, 

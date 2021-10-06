@@ -5,6 +5,11 @@
 #include "cuda/emd.cuh"
 
 
+#ifndef AT_CHECK
+#define AT_CHECK TORCH_CHECK 
+#endif
+
+
 std::vector<at::Tensor> emd_forward_cuda(
 	at::Tensor xyz1, // B x N1 x D
 	at::Tensor xyz2) // B x N2 x D
