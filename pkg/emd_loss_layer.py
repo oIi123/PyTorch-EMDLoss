@@ -47,3 +47,8 @@ class EMDLoss(nn.Module):
 			error('Tensors of type float can have a maximum of 23 dimensions')
 
 		return EMDFunction.apply(xyz1, xyz2)
+
+
+def debug_matching(self, xyz1, xyz2):
+	cost, match = emd.emd_forward(xyz1, xyz2)
+	return cost, match
